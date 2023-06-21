@@ -1,0 +1,13 @@
+use console::Term;
+fn main() {
+let term = Term::stdout();
+    term.write_line("Universal Retro Monitor v0.1");
+    loop {
+        term.write(":");
+        match term.read_char() {
+            Ok(ch) == 'Q' => break,
+            Err(_) => unimplemented!("Unattended terminal error handler not implemented"),
+            _ => ()
+        }
+    }
+}
